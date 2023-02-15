@@ -28,6 +28,12 @@ app.get('/users', async (req, res) => {
   res.json(userList);
 });
 
+app.get('/users/:_id', async (req, res) => {
+  const user = await User.findById(req.params._id);
+
+  res.json(user);
+});
+
 app.post('/users/create', async (req, res) => {
   const user = new User({
     username: req.body.username,
@@ -45,12 +51,12 @@ app.delete('/users/delete/:_id', async (req, res) => {
   res.json(result);
 });
 
-// app.put('/users/edit/:_id', async (req, res) => {
-//   const user = await User.findById(req.params._id);
+app.put('/users/edit/:_id', async (req, res) => {
+  const user = await User.findById(req.params._id);
 
-//   user.username = req.body.username;
-//   user.password = req.body.password;
-//   user.save();
+  user.username = req.body.username;
+  user.password = req.body.password;
+  user.save();
 
-//   res.json(user);
-// });
+  res.json(user);
+});

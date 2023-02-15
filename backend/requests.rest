@@ -4,8 +4,8 @@ POST http://localhost:3001/users/create
 Content-Type: application/json
 
 {
-	"username": "joey",
-    "password": "skdjfksdf"
+	"username": "test",
+    "password": "OOGA"
 }
 
 ###
@@ -14,14 +14,18 @@ DELETE http://localhost:3001/users/delete/63ec7d41e187997d05803cfc
 
 ###
 
-GET http://localhost:3001/users/
+GET http://localhost:3001/users
 
 ###
 
-PUT http://localhost:3001/users/63ec7e8ce187997d05803d01
+PUT http://localhost:3001/users/edit/63ec81eb9a76a2939f1a8fda
 Content-Type: application/json
 
 {
 	"username": "I AM CHANGED!!!",
     "password": "ooga booga"
 }
+
+###
+
+GET http://localhost:3001/users/
