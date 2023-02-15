@@ -1,0 +1,27 @@
+//USERS TEST
+
+POST http://localhost:3001/users/create
+Content-Type: application/json
+
+{
+	"username": "joey",
+    "password": "skdjfksdf"
+}
+
+###
+
+DELETE http://localhost:3001/users/delete/63ec7d41e187997d05803cfc
+
+###
+
+GET http://localhost:3001/users/
+
+###
+
+PUT http://localhost:3001/users/63ec7e8ce187997d05803d01
+Content-Type: application/json
+
+{
+	"username": "I AM CHANGED!!!",
+    "password": "ooga booga"
+}
