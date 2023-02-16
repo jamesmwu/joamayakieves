@@ -1,0 +1,7 @@
+* { /* selects all elements*/
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+}
