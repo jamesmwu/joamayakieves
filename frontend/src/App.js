@@ -6,15 +6,15 @@ import Navbar from "./Navbar"
 
 function App(){
   return (
-    <>
+    <div>
     <Navbar/>
     <div className='App'>
       <Routes>
-        <Route path='/home' element={<Home />}/>
+        <Route path='' element={<Home />}/>
         <Route path='/profile' element={<Profile />}/>
       </Routes>
     </div>
-  </>
+  </div>
   );
 }
 

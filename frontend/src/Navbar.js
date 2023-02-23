@@ -1,5 +1,5 @@
 import {Link, useMatch, useResolvedPath} from "react-router-dom"
-export default function Navbar() {
+export default function navStyle() {
     return (
     <nav className="nav">
         <Link to ="/" className="site-title"> Opportunity Board</Link>
