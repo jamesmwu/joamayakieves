@@ -1,0 +1,59 @@
+//USERS TEST
+
+POST http://localhost:3001/users/create
+Content-Type: application/json
+
+{
+	"username": "test",
+    "password": "OOGA"
+}
+
+###
+
+DELETE http://localhost:3001/users/delete/63ec7d41e187997d05803cfc
+
+###
+
+GET http://localhost:3001/users
+
+###
+
+PUT http://localhost:3001/users/edit/63ec81eb9a76a2939f1a8fda
+Content-Type: application/json
+
+{
+	"username": "I AM CHANGED!!!",
+    "password": "ooga booga"
+}
+
+###
+
+GET http://localhost:3001/users/
+
+###
+
+// Posts test 
+
+GET http://localhost:3001/posts
+
+### 
+PUT http://localhost:3001/posts/create 
+Content-Type: application/json
+
+{
+	"user": "GED!!!",
+    "content": "bga",
+    "likes": 10
+}
+
+###
+DELETE http://localhost:3001/posts/delete/63f6ed3b151bbcb5c5249793
+
+###
+
+PUT http://localhost:3001/posts/edit/63f6ef2eab18561b0405751a
+Content-Type: application/json
+
+{
+    "content": "bga"
+}
