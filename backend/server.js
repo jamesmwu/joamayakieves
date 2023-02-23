@@ -20,6 +20,7 @@ mongoose
 app.listen(3001, () => console.log('Server listening on port 3001'));
 
 const User = require('./models/users');
+const Post = require('./models/posts');
 
 //Users endpoints
 app.get('/users', async (req, res) => {
@@ -59,4 +60,41 @@ app.put('/users/edit/:_id', async (req, res) => {
   user.save();
 
   res.json(user);
+});
+
+// Post endpoints 
+
+// get to return all the posts 
+app.get('/posts', async (req, res) => {
+  // this should return all posts
+  const postList = await Post.find();
+  res.json(postList);
+});
+
+// posts/create_:id -> create post
+app.put('/posts/create', async (req, res) => {
+  const post = new Post({
+    date: req.body.date,
+    user: req.body.user,
+    content: req.body.content,
+    likes: req.body.likes
+  });
+   
+  await post.save();
+  res.json(post);
+});
+
+// posts/delete_:id> ----------------------
+app.delete('/posts/delete/:_id', async (req, res) => {
+  const result = await Post.findByIdAndDelete(req.params._id);
+  res.json(result);
+});
+
+// edit post - content only 
+app.put('/posts/edit/:_id', async (req, res) => {
+  const post = await Post.findById(req.params._id);
+  post.content = req.body.content
+   
+  post.save();
+  res.json(post);
 });
