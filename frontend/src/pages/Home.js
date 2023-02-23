@@ -1,7 +1,12 @@
-import React from "react";
+import React from 'react';
+import Post from '../components/Post';
+import '../styles/Home.css';
 
 export default function Home() {
     return (
-        <p>HOME</p>
+        <div className='homeStyle'>
+            <p>HOME</p>
+            <Post />
+        </div>
     );
 }
