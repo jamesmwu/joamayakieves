@@ -8,10 +8,8 @@ export default function Home() {
         <>
             <div className='homeStyle'>
                 <p>HOME</p>
-                <Post />
             </div>
             <div>
-            <p>Hey bitch!</p>
                 <Bubbles />
             </div>
         </>
