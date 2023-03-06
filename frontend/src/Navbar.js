@@ -11,9 +11,9 @@ export default function Navbar() {
     );
 }
 
-function CustomLink({ to, children, ...props }) {
-    const resolvedPath = useResolvedPath(to);
-    const isActive = useMatch({ path: resolvedPath.pathname, end: true }); // end: true to make sure whole path matches
+function CustomLink({to, children,...props}) {
+   const resolvedPath = useResolvedPath(to)
+   const isActive = useMatch({path: resolvedPath.pathname, end: true}) // end: true to make sure whole path matches
 
     return (
         <li className={isActive ? "active" : ""}>

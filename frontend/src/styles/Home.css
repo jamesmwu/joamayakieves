@@ -4,3 +4,16 @@
     margin: 1rem;
     text-align: center;
 }
+
+body {
+    background-color: rgb(175, 236, 251);
+}
+
+h1 {
+    color: black;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+}
