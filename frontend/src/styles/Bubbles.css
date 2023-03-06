@@ -76,4 +76,11 @@ h1 {
 
 .heart {
     display: flex;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.heart:hover{
+    transform: scale(1.05);
 }

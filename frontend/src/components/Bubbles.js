@@ -7,9 +7,9 @@ function Bubbles() {
     <>
       <div className="bubble-container">
         <BubbleItem
-          title='Networking Event'
+          title='Networking Event. A super long title. It wraps around wow this is amazing!'
           author='Joana Fang'
-          about='Meet at Bruin Bear on Saturday for networking!'
+          about='Meet at Bruin Bear on Saturday for networking! Now we can make the about section really long too. Oh my it stretches the bubble how nice!'
         />
         <BubbleItem
           title='Internship Opportunity'
