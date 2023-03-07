@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
+
+body{
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+}
+.Homebutton{
+    position:fixed ;
+    height: 40px;
+    line-height: 30px;  
+    width: 40px;  
+    font-size: 2em;
+    font-weight: bold;
+    border: 2px;
+    border-radius: 50%;
+    background-color: #6d9ced;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 600px;
+    margin-top: 600px;
+    display: inline-block;
+    box-shadow: 0 0 3px rgb(102, 104, 122);
+}
+
+.Npbutton {
+    text-align: center;
+    color: white;
+    font-family: 'Karla', sans-serif;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    background: rgb(96, 160, 199);
+    border:#6d9ced;
+    border-radius: 5px;
+    border: 12px;
+    padding: 5px;
+}
+
+.Closeb {
+    text-align: center;
+    color: white;
+    font-family: 'Karla', sans-serif;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    background: rgb(199, 110, 125);
+    border:#6d9ced;
+    border-radius: 5px;
+    border: 12px;
+    padding: 5px;
+}
+
+.Popupstyle {
+    font-family: 'Karla', sans-serif;
+    border-radius: 25px;
+    background: rgb(109, 184, 184);
+    width: 100px;
+    height: 200px;
+}
