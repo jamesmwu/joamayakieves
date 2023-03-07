@@ -1,0 +1,41 @@
+.pageStyle{ 
+    background-color: rgb(168, 119, 107); 
+} 
+
+
+img {
+  border-radius: 50%;
+  opacity: 1.0;
+  border: 2px solid rgb(0, 0, 0);
+  width:70px
+}
+
+.loginstyle{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    text-align:left;
+    font: 30px "Times New Roman";
+}
+
+.textboxstyle{
+    border-radius: 30%;
+}
+
+button{
+    border: none;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+label{
+    text-align: left; 
+    padding:0.25rem 0;
+}
+
+input {
+    margin: 0.5rem 0;
+}
+
