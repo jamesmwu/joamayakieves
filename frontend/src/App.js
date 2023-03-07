@@ -16,7 +16,7 @@ function App(){
         <Route path='/profile' element={<Login />}/>
       </Routes>
     </div>
-  </div>
+    </div>
   );
 }
 

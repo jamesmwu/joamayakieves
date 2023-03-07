@@ -47,8 +47,12 @@ export const Login = () =>{
 
 /*
 export default function Profile() {
+
     return (
-        <p>PROFILE</p>
+        <h1>PROFILE</h1>,
+        <p>your name</p>
+        
+        
     );
   
 } */
