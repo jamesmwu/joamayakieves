@@ -35,7 +35,7 @@
 
 .navStyle li.active{
     background-color: #555;
-}  
+}
 
 .navStyle li:hover{
     background-color: #777;
