@@ -5,13 +5,8 @@ import '../styles/Home.css';
 
 export default function Home() {
     return (
-        <>
-            <div className='homeStyle'>
-                <p>HOME</p>
-            </div>
-            <div>
-                <Bubbles />
-            </div>
-        </>
+        <div>
+            <Bubbles />
+        </div>
     );
 }
