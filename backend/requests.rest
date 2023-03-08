@@ -41,13 +41,14 @@ PUT http://localhost:3001/posts/create
 Content-Type: application/json
 
 {
-	"user": "GED!!!",
-    "content": "bga",
-    "likes": 10
+	"user": "Maya Balakrishnan",
+    "title": "Meet Research Labs",
+    "content": "aeiurh aiuerh iuaehr uiae hriuae rbjaeb jhaeb fhjeab",
+    "likes": 1
 }
 
 ###
-DELETE http://localhost:3001/posts/delete/63f6ed3b151bbcb5c5249793
+DELETE http://localhost:3001/posts/delete/6406bf25c93fdb8e8ddaab64
 
 ###
 
