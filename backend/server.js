@@ -76,6 +76,7 @@ app.put('/posts/create', async (req, res) => {
   const post = new Post({
     user: req.body.user,
     title: req.body.title,
+    link: req.body.link,
     content: req.body.content,
     likes: req.body.likes,
     date: req.body.date

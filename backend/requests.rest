@@ -41,10 +41,11 @@ PUT http://localhost:3001/posts/create
 Content-Type: application/json
 
 {
-	"user": "Maya Balakrishnan",
-    "title": "Meet Research Labs",
+	"user": "Genevieve",
+    "title": "GITHUB LINK TEST",
+    "link": "https://github.com/",
     "content": "aeiurh aiuerh iuaehr uiae hriuae rbjaeb jhaeb fhjeab",
-    "likes": 1
+    "likes": 100
 }
 
 ###
