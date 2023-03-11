@@ -1,24 +1,23 @@
 
 
 .navStyle{
-    background-color:#c6579d;
-    color: white;
+    background-color:white;
+    color: black;
+    height: 90px;
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
-    gap: 2rem;
-    padding: 0 1rem;
+    /* align-items: stretch; */
+    /* gap: 2rem; */
+    padding: 0rem 1rem;
 }
 
-.site-title{
-    /*font-size: 2rem;
-    font-style:italic*/
-    font: 30px "Times New Roman";
+img {
+    width: 150px;
 }
 
 .navStyle ul {
-    padding:0;
-    margin:0;
+    padding: 0px;
+    margin: 0px;
     list-style: none;
     display: flex;
     gap: 1rem;
@@ -27,20 +26,29 @@
 .navStyle a{
     color: inherit;
     text-decoration: none;
-    height: 100%;
+    height: 30%;
     display: flex;
     align-items: center;
-    padding: .25rem;
-}
-
-.navStyle li.active{
-    background-color: #555;
+    padding: .3rem;
+    position: relative;
+    top: 25px;
 }
 
 .navStyle li:hover{
-    background-color: #777;
+    transform: scale(1.07);
 }
 
+.navStyle li.active{
+    transform: scale(1.17);
+}
 
+.navStyle li.active:hover{
+    transform: scale(1.27);
+}
 
-
+.pageLinks {
+    font-weight: bold;
+    border: 1px solid rgb(234, 233, 233);
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px 1px rgba(189, 188, 188, 0.219);
+}
