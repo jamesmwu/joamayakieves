@@ -28,13 +28,6 @@ function BubbleItem({ title, author, about, link }) {
           )}
         </div>
       </div>
-      <div className="heart" onClick={handleHeartClick}>
-        {isUnlikedHeart ? (
-          <UnlikedHeart />
-        ) : (
-          <LikedHeart />
-        )}
-      </div>
 
       {link ?
         <div>
