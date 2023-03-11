@@ -49,7 +49,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3001/posts/delete/6406bf25c93fdb8e8ddaab64
+DELETE http://localhost:3001/posts/delete/640c1ecd7d06c3e34377014c
 
 ###
 

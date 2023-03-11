@@ -13,29 +13,29 @@ function BubbleItem({ title, author, about, link }) {
   }
 
   return (
-    <>
-      <div className="bubble">
-        <div className="text">
+    <div className="bubble">
+      <div className="text">
+        <div className='topContainer'>
           <div className="title">{title}</div>
-          <div className="author">{author}</div>
-          <div className="about">{about}</div>
+          <div className="heart" onClick={handleHeartClick}>
+            {isUnlikedHeart ? (
+              <UnlikedHeart />
+            ) : (
+              <LikedHeart />
+            )}
+          </div>
         </div>
-        <div className="heart" onClick={handleHeartClick}>
-          {isUnlikedHeart ? (
-            <UnlikedHeart />
-          ) : (
-            <LikedHeart />
-          )}
-        </div>
+
+        <div className="author">{author}</div>
+        <div className="about">{about}</div>
       </div>
 
       {link ?
-        <div>
-          <a href={link} target="_blank" rel="noopener noreferrer">
-            <button>{link}</button>
-          </a>
+        <div className='linking'>
+          <a href={link} target="_blank" rel="noopener noreferrer">Sign Up</a>
         </div> : null}
-    </>
+    </div>
+
   );
 }
 
