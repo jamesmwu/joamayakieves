@@ -3,24 +3,32 @@
 body{
     font-family: 'Karla', sans-serif;
     font-weight: bold;
+    
 }
 .Homebutton{
-    position:fixed ;
+    position: sticky;
+    bottom: 1rem;
     height: 40px;
-    line-height: 30px;  
+    line-height: 40px;  
     width: 40px;  
     font-size: 2em;
     font-weight: bold;
     border: 2px;
     border-radius: 50%;
-    background-color: #6d9ced;
+    background-color: #4d95c5;
     color: white;
     text-align: center;
     cursor: pointer;
-    margin-left: 600px;
-    margin-top: 600px;
+    margin-left: 90%;
+    margin-top: 65px;
+    margin-bottom: 0%;
     display: inline-block;
     box-shadow: 0 0 3px rgb(102, 104, 122);
+}
+
+
+.Bigbox {
+    padding: 50px;
 }
 
 .Npbutton {

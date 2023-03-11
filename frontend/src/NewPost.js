@@ -12,12 +12,15 @@ export default function NewPost(){
     // Styling a regular HTML input
     const StyledInput = styled.input`
     font-family: 'Karla', sans-serif;
-    background: lightblue;
+    background: #cce9fd;
     display: block;
     margin: 10px 10px;
     border: 2px #6d9ced;
     border-radius: 5px;
+    padding: 10px;
+    width: 91%;
     `;
+
 
     
     // Creating a custom hook
@@ -45,8 +48,6 @@ export default function NewPost(){
           modal nested>
             
             {close => (
-              
-                
                 
                 <div className='modal'>
                   <div className='content'>
