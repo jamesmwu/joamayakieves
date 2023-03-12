@@ -92,6 +92,7 @@ h1 {
 }
 
 .linking {
+	margin-top: 2rem;
 	text-align: left;
 }
 
@@ -103,6 +104,7 @@ h1 {
 	border-radius: 2rem;
 	color: black;
 	transition: all 0.15s ease-out;
+	font-size: 12px;
 }
 
 .linking a:hover {

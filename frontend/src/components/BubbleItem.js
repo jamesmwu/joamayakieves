@@ -28,12 +28,13 @@ function BubbleItem({ title, author, about, link }) {
 
         <div className="author">{author}</div>
         <div className="about">{about}</div>
-      </div>
 
+      </div>
       {link ?
         <div className='linking'>
           <a href={link} target="_blank" rel="noopener noreferrer">Sign Up</a>
         </div> : null}
+
     </div>
 
   );
