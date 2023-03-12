@@ -5,7 +5,7 @@ import '../styles/NewPost.css';
 
 
 
-export default function NewPost({ newPostTitle, setNewPostTitle, newPostContent, setNewPostContent, addPost }) {
+export default function NewPost({ newPostTitle, setNewPostTitle, newPostContent, setNewPostContent, newPostLink, setNewPostLink, addPost }) {
 
   const inputProps = useInput();
 
@@ -58,17 +58,16 @@ export default function NewPost({ newPostTitle, setNewPostTitle, newPostContent,
                 value={newPostContent}
               />
             </div>
-            {/* TO BE IMPLEMENTED: Adding links as well */}
-            {/* <div>
+            <div>
               External Link
               <input
                 type='text'
                 className='messageInput'
-                onChange={(e) => setNewPostTitle(e.target.value)}
+                onChange={(e) => setNewPostLink(e.target.value)}
                 placeholder='Type here :)'
-                value={newPostTitle}
+                value={newPostLink}
               />
-            </div> */}
+            </div>
           </div>
           <div>
             <div className="Npbutton"

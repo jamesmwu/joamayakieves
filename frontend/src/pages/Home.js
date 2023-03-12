@@ -10,6 +10,7 @@ const URL = 'http://localhost:3001';
 export default function Home() {
     const [newPostTitle, setNewPostTitle] = useState('');
     const [newPostContent, setNewPostContent] = useState('');
+    const [newPostLink, setNewPostLink] = useState('');
 
     //Lets user add new post
     async function addPost() {
@@ -24,6 +25,7 @@ export default function Home() {
                 user: 'Placeholder User',
                 title: newPostTitle,
                 content: newPostContent,
+                link: newPostLink,
                 likes: 0
             })
             .then(function (response) {
@@ -40,7 +42,7 @@ export default function Home() {
     return (
         <div>
             <Bubbles />
-            <NewPost newPostTitle={newPostTitle} setNewPostTitle={setNewPostTitle} newPostContent={newPostContent} setNewPostContent={setNewPostContent} addPost={addPost} />
+            <NewPost newPostTitle={newPostTitle} setNewPostTitle={setNewPostTitle} newPostContent={newPostContent} setNewPostContent={setNewPostContent} newPostLink={newPostLink} setNewPostLink={setNewPostLink} addPost={addPost} />
         </div>
     );
 }
