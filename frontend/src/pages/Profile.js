@@ -10,21 +10,15 @@ export const Login = () =>{
         console.log(email); // have access bc state
     }
     return(
-        <div className="pagestyle">
         <div className="loginstyle">
-        <form onSubmit={handleSubmit}>
+        <form className="form" onSubmit={handleSubmit}>
             <label htmlFor="email">email: </label>
-            <div className="Textboxstyle">
             <input value={email} onChange={(e)=> setEmail(e.target.value)} type="email" placeholder="emailname@gmail.com" id="email" name="email"/>
-           </div>
             <label htmlFor="password">password: </label>
-            <div className="Textboxstyle">
             <input value={pass} onChange={(e)=> setPass(e.target.value)}type="password" placeholder="*********" id="password" name="password"/>
-            </div>
-            <button>Log In</button>
+            <button type="submit"> Log In</button>
         </form>
         <button>Don't have an account? Click here to register</button>
-        </div>
         <p>
 
         </p>
