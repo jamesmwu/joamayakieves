@@ -41,12 +41,24 @@ PUT http://localhost:3001/posts/create
 Content-Type: application/json
 
 {
-	"user": "Genevieve",
+	"user": "TEST TEST TEST",
     "title": "GITHUB LINK TEST",
     "link": "https://github.com/",
     "content": "aeiurh aiuerh iuaehr uiae hriuae rbjaeb jhaeb fhjeab",
     "likes": 100
 }
+
+### 
+PUT http://localhost:3001/posts/create 
+Content-Type: application/json
+
+{
+	"user": "seothset",
+    "title": "kadhklaehfkljehfk",
+    "content": "aeiurh aiuerh iuaehr uiae hriuae rbjaeb jhaeb fhjeab",
+    "likes": 100
+}
+
 
 ###
 DELETE http://localhost:3001/posts/delete/640c1ecd7d06c3e34377014c

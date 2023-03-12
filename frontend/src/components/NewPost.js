@@ -5,23 +5,9 @@ import '../styles/NewPost.css';
 
 
 
-export default function NewPost() {
+export default function NewPost({ newPostTitle, setNewPostTitle, newPostContent, setNewPostContent, addPost }) {
 
   const inputProps = useInput();
-
-  // Styling a regular HTML input
-  const StyledInput = styled.input`
-    font-family: 'Karla', sans-serif;
-    background: #cce9fd;
-    display: block;
-    margin: 10px 10px;
-    border: 2px #6d9ced;
-    border-radius: 5px;
-    padding: 10px;
-    width: 91%;
-    `;
-
-
 
   // Creating a custom hook
   function useInput(defaultValue) {
@@ -44,7 +30,6 @@ export default function NewPost() {
       </div>
 
     }
-
       modal nested>
 
       {close => (
@@ -54,33 +39,41 @@ export default function NewPost() {
 
             <div>
               Post Subject
-              <StyledInput
-                {...inputProps}
-                placeholder="Type here :)"
+              <input
+                type='text'
+                className='messageInput'
+                onChange={(e) => setNewPostTitle(e.target.value)}
+                placeholder='Type here :)'
+                value={newPostTitle}
               />
-              <span> {inputProps.value} </span>
             </div>
             <div>
+              Post Content
+
+              <input
+                type='text'
+                className='messageInput'
+                onChange={(e) => setNewPostContent(e.target.value)}
+                placeholder='Type here :)'
+                value={newPostContent}
+              />
+            </div>
+            {/* TO BE IMPLEMENTED: Adding links as well */}
+            {/* <div>
               External Link
-              <StyledInput
-                {...inputProps}
-                placeholder="Type here !"
+              <input
+                type='text'
+                className='messageInput'
+                onChange={(e) => setNewPostTitle(e.target.value)}
+                placeholder='Type here :)'
+                value={newPostTitle}
               />
-              <span> {inputProps.value} </span>
-            </div>
-            <div>
-              Post Body
-              <StyledInput
-                {...inputProps}
-                placeholder="Type here !"
-              />
-              <span> {inputProps.value} </span>
-            </div>
+            </div> */}
           </div>
           <div>
             <div className="Npbutton"
               onClick={
-                close
+                () => { close(); addPost(); }
               }>
               Submit
             </div>
