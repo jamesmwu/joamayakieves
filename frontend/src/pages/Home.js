@@ -22,8 +22,8 @@ export default function Home() {
         axios
             .post(URL + '/posts/create', {
                 user: 'Placeholder User',
-                title: 'newPostTitle',
-                content: 'newPostContent',
+                title: newPostTitle,
+                content: newPostContent,
                 likes: 0
             })
             .then(function (response) {

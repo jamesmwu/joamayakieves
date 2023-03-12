@@ -37,7 +37,7 @@ GET http://localhost:3001/users/
 GET http://localhost:3001/posts
 
 ### 
-PUT http://localhost:3001/posts/create 
+POST http://localhost:3001/posts/create 
 Content-Type: application/json
 
 {

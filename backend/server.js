@@ -72,7 +72,7 @@ app.get('/posts', async (req, res) => {
 });
 
 // posts/create_:id -> create post
-app.put('/posts/create', async (req, res) => {
+app.post('/posts/create', async (req, res) => {
   const post = new Post({
     user: req.body.user,
     title: req.body.title,
