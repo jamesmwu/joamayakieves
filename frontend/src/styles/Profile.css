@@ -1,43 +1,47 @@
-.Profile{
-    text-align: center;
-    display: flex;
-    min-height:100vh;
-    align-items: center;
-    justify-content: center;
+.Profile {
+	text-align: center;
+	display: flex;
+	min-height: 100vh;
+	align-items: center;
+	justify-content: center;
 }
 
 img {
-   
-  border-radius: 50%;
-  opacity: 1.0;
-  border: 2px solid rgb(0, 0, 0);
-  width:70px
+	border-radius: 50%;
+	opacity: 1;
+	border: 2px solid rgb(0, 0, 0);
+	width: 70px;
 }
 
-.loginstyle, .form{
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    /*text-align:left;
-    font: 30px "Times New Roman";*/
+.loginStyle {
+	height: 50vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-label {
-    text-align: left;
-    padding: 0.25rem 0;
+input {
+	margin: 0.5rem 0;
+	padding: 15px;
+	border: none;
+	border-radius: 10px;
+	width: 50vh;
+	text-align: left;
 }
 
-input{
-    margin: 0.5rem 0;
-    padding: 15px;
-    border: none;
-    border-radius: 10px;
+.profInput {
+	margin-top: 1rem;
 }
 
-button{
-    border: none;
-    background-color: white;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
+.userInput {
+	margin-top: 2rem;
+}
+
+button {
+	border: none;
+	background-color: white;
+	padding: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	width: 10rem;
 }
