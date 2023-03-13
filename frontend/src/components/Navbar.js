@@ -1,12 +1,24 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import SearchBar from "./components/SearchBar";
+import WebsiteLogo from "./icons/reach4theclouds.jpg"
+
 export default function Navbar() {
     return (
         <nav className="navStyle">
-            <Link to="/" className="site-title"> Opportunity Board</Link>
-            <ul>
-                <CustomLink to="/">Home</CustomLink>
-                <CustomLink to="/profile">Profile</CustomLink>
+            
+            <Link to="/" ><img src={WebsiteLogo}/></Link>
+            
+            <SearchBar placeholder="Search for a post..."/> {/*when inserting data use data={name of imported data module}*/}
+            
+            <ul> 
+                <hul>
+                    <CustomLink className="pageLinks" to="/">Home</CustomLink>
+                </hul>             
+                
+                <CustomLink className="pageLinks" to="/profile">Profile</CustomLink>
             </ul>
+            
+           
         </nav>
     );
 }
