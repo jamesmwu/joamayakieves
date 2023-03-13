@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import '../styles/Profile.css'
 
-export const Login = () =>{
+export default function Profile(){
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
 
@@ -39,14 +39,3 @@ export const Login = () =>{
     )
 }
 
-/*
-export default function Profile() {
-
-    return (
-        <h1>PROFILE</h1>,
-        <p>your name</p>
-        
-        
-    );
-  
-} */

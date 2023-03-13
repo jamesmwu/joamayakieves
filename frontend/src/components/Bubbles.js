@@ -25,8 +25,8 @@ function Bubbles() {
   return (
     <div className="bubble-container">
       {bubbles.map((bub) => {
-        return (<BubbleItem key={bub._id} title={bub.title} author={bub.user} about={bub.content} />);
-      })}
+        return (<BubbleItem key={bub._id} title={bub.title} author={bub.user} link={bub.link} about={bub.content} />);
+      }).reverse()}
     </div>
   );
 }

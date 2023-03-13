@@ -37,18 +37,31 @@ GET http://localhost:3001/users/
 GET http://localhost:3001/posts
 
 ### 
+POST http://localhost:3001/posts/create 
+Content-Type: application/json
+
+{
+	"user": "TEST TEST TEST",
+    "title": "GITHUB LINK TEST",
+    "link": "https://github.com/",
+    "content": "aeiurh aiuerh iuaehr uiae hriuae rbjaeb jhaeb fhjeab",
+    "likes": 100
+}
+
+### 
 PUT http://localhost:3001/posts/create 
 Content-Type: application/json
 
 {
-	"user": "Maya Balakrishnan",
-    "title": "Meet Research Labs",
+	"user": "seothset",
+    "title": "kadhklaehfkljehfk",
     "content": "aeiurh aiuerh iuaehr uiae hriuae rbjaeb jhaeb fhjeab",
-    "likes": 1
+    "likes": 100
 }
 
+
 ###
-DELETE http://localhost:3001/posts/delete/6406bf25c93fdb8e8ddaab64
+DELETE http://localhost:3001/posts/delete/640c1ecd7d06c3e34377014c
 
 ###
 
