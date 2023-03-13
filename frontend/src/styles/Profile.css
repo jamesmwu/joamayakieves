@@ -37,6 +37,13 @@ input {
 	margin-top: 2rem;
 }
 
+.btnContainer {
+	margin-top: 3rem;
+	width: 23rem;
+	display: flex;
+	justify-content: space-between;
+}
+
 button {
 	border: none;
 	background-color: white;

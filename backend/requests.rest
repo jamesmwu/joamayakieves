@@ -10,7 +10,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3001/users/delete/63ec7d41e187997d05803cfc
+DELETE http://localhost:3001/users/delete/640fb6afdcd654601b071172
 
 ###
 
@@ -29,6 +29,17 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3001/users/
+
+###
+
+
+POST http://localhost:3001/login
+Content-Type: application/json
+
+{
+	"username" : "test",
+	"password" : "OOGA"
+}
 
 ###
 
