@@ -72,14 +72,16 @@ app.get('/posts', async (req, res) => {
 });
 
 // posts/create_:id -> create post
-app.put('/posts/create', async (req, res) => {
+app.post('/posts/create', async (req, res) => {
   const post = new Post({
-    date: req.body.date,
     user: req.body.user,
+    title: req.body.title,
+    link: req.body.link,
     content: req.body.content,
-    likes: req.body.likes
+    likes: req.body.likes,
+    date: req.body.date
   });
-   
+
   await post.save();
   res.json(post);
 });
@@ -93,8 +95,8 @@ app.delete('/posts/delete/:_id', async (req, res) => {
 // edit post - content only 
 app.put('/posts/edit/:_id', async (req, res) => {
   const post = await Post.findById(req.params._id);
-  post.content = req.body.content
-   
+  post.content = req.body.content;
+
   post.save();
   res.json(post);
 });

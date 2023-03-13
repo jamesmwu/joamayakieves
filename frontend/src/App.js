@@ -3,7 +3,8 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import './styles/Components.css';
-import Navbar from "./Navbar";
+import Navbar from "./components/Navbar";
+import 'reactjs-popup/dist/index.css';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         </Routes>
       </div>
     </div>
+
   );
 }
 
