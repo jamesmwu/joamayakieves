@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React from 'react';
 import Popup from 'reactjs-popup';
 import '../styles/NewPost.css';
 
@@ -7,6 +6,7 @@ import '../styles/NewPost.css';
 
 export default function NewPost({ newPostTitle, setNewPostTitle, newPostContent, setNewPostContent, newPostLink, setNewPostLink, addPost }) {
 
+  /*
   const inputProps = useInput();
 
   // Creating a custom hook
@@ -21,6 +21,7 @@ export default function NewPost({ newPostTitle, setNewPostTitle, newPostContent,
     };
 
   }
+  */
 
   return (
 
