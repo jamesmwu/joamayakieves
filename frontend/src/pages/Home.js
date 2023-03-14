@@ -3,6 +3,7 @@ import Bubbles from "../components/Bubbles";
 import NewPost from '../components/NewPost';
 import '../styles/Home.css';
 import axios from 'axios';
+import { useAuthState } from '../context/context.js';
 
 const URL = 'http://localhost:3001';
 
@@ -11,6 +12,8 @@ export default function Home() {
     const [newPostTitle, setNewPostTitle] = useState('');
     const [newPostContent, setNewPostContent] = useState('');
     const [newPostLink, setNewPostLink] = useState('');
+
+    const userDetails = useAuthState();
 
     //Lets user add new post
     async function addPost() {
@@ -22,7 +25,7 @@ export default function Home() {
 
         axios
             .post(URL + '/posts/create', {
-                user: 'Placeholder User',
+                user: userDetails.username,
                 title: newPostTitle,
                 content: newPostContent,
                 link: newPostLink,
