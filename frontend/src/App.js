@@ -3,6 +3,7 @@ import { Route, Routes, Navigate, Outlet } from 'react-router-dom';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Login from './pages/Login';
+import Signup from './pages/Signup';
 import './styles/Components.css';
 import Navbar from "./components/Navbar";
 import { useAuthState } from './context/context.js';
@@ -29,7 +30,7 @@ function App() {
             <Route path='/home' element={<Home />} />
             <Route path='/profile' element={<Profile />} />
           </Route>
-
+          <Route path='/signup' element={<Signup />} />
         </Routes>
       </div>
     </div>
