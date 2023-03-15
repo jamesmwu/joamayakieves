@@ -1,6 +1,7 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
-import SearchBar from "./components/SearchBar";
-import WebsiteLogo from "./icons/reach4theclouds.jpg"
+import SearchBar from "./SearchBar";
+import WebsiteLogo from "../icons/reach4theclouds.jpg"
+import Bubbles from "../components/Bubbles";
 
 export default function Navbar() {
     return (
@@ -8,8 +9,7 @@ export default function Navbar() {
             
             <Link to="/" ><img src={WebsiteLogo}/></Link>
             
-            <SearchBar placeholder="Search for a post..."/> {/*when inserting data use data={name of imported data module}*/}
-            
+          
             <ul> 
                 <hul>
                     <CustomLink className="pageLinks" to="/">Home</CustomLink>

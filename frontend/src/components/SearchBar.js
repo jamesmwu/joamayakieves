@@ -2,7 +2,38 @@ import React, { useState } from "react";
 import "../styles/SearchBar.css";
 import SearchIcon from "../icons/search-icon.jsx";
 import CloseIcon from "../icons/close-icon.jsx";
+import Bubbles from "../components/Bubbles"; // new needed for searching through the bubbles?
 
+// treat like text box 
+
+const SearchBar = ({ bubblePost, setSearchResults}) => {
+  const handleSubmit = (e) => e.preventDefault()
+
+  const handleSearchChange = (e) => {
+    if (e.target.value === "") return setSearchResults(bubblePost)
+
+    const results = bubblePost.filter(bubblePost => bubblePost.title.toLowerCase().includes(e.target.value)|| 
+    (bubblePost.content.toLowerCase().includes(e.target.value))||(bubblePost.user.toLowerCase().includes(e.target.value)))
+    setSearchResults(results)
+  }
+  return(
+    <header>
+      <form className="search" onSubmit={handleSubmit}>
+        <input
+          className="search__input"
+          type="text"
+          id="search"
+          onChange={handleSearchChange}
+          />
+          <button className="search__button">
+          <SearchIcon /> 
+          </button>
+      </form>
+    </header>
+  )
+}
+export default SearchBar
+/*
 function SearchBar({ placeholder, data }) {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
@@ -47,7 +78,7 @@ function SearchBar({ placeholder, data }) {
         <div className="dataResult">
           {filteredData.slice(0, 15).map((value, key) => {
             return (
-              <a className="dataItem" href={value.link} target="_blank">
+              <a className="dataItem" href={value.link} target="_blank"> 
                 <p>{value.title} </p>
               </a>
             );
@@ -59,3 +90,4 @@ function SearchBar({ placeholder, data }) {
 }
 
 export default SearchBar;
+*/
