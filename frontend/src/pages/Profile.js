@@ -1,28 +1,56 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import '../styles/Profile.css';
 import { useNavigate } from 'react-router-dom';
 import { useAuthDispatch, useAuthState } from '../context';
 import { logout } from '../context/actions';
+import "../styles/Bubbles.css";
+import BubbleItem from "../components/BubbleItem.js";
+import axios from 'axios';
 
-export default function Profile() {
+const URL = 'http://localhost:3001';
 
-    const navigate = useNavigate();
-    const dispatch = useAuthDispatch();
-    const handleLogout = () => {
-        logout(dispatch);
-        navigate('/login');
-        return;
-    };
+function Profile() {
+  //Array of posts
+  const [userBubbles, setBubbles] = useState([]);
 
-    const userDetails = useAuthState();
+  async function getFeed() {
+    try {
+      const response = await axios.get(URL + '/posts');
+      setBubbles(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
-    return (
-        <div>
-            <h1>What's Poppin {userDetails.username}</h1>
-            <button onClick={handleLogout} className='button'>
-                Logout
-            </button>
+  useEffect(() => {
+    getFeed();
+  }, [userBubbles]);
+
+  const userDetails = useAuthState();
+
+  const navigate = useNavigate();
+      const dispatch = useAuthDispatch();
+      const handleLogout = () => {
+          logout(dispatch);
+          navigate('/login');
+          return;
+      };
+
+  return (
+    <div>
+        <h1>What's Poppin {userDetails.username}</h1>
+        <button onClick={handleLogout} className='button'>
+            Logout    
+        </button>
+        <div className="bubble-container">
+            {userBubbles.map((bub) => {
+                if (bub.user==userDetails.username) {
+                    return (<BubbleItem key={bub._id} title={bub.title} author={bub.user} link={bub.link} about={bub.content} />);
+                }
+            }).reverse()}
         </div>
-    );
+    </div>
+  );
 }
 
+export default Profile;
