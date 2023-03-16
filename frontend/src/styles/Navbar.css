@@ -47,12 +47,13 @@ img {
     transform: scale(1.07);
 }
 
-.navStyle li.active{
+/* .navStyle li.active{
     transform: scale(1.17);
-}
+    background-color:rgba(189, 188, 188, 0.219);
+} */
 
-.navStyle li.active:hover{
-    transform: scale(1.27);
+.navStyle li:hover{
+    transform: scale(1.05);
 }
 
 .pageLinks {
