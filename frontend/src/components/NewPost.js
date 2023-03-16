@@ -38,7 +38,7 @@ export default function NewPost({ newPostTitle, setNewPostTitle, newPostContent,
         <div className='modal'>
           <div className='content'>
 
-            <div>
+            <div className="container">
               Post Subject
               <input
                 type='text'
@@ -48,7 +48,7 @@ export default function NewPost({ newPostTitle, setNewPostTitle, newPostContent,
                 value={newPostTitle}
               />
             </div>
-            <div>
+            <div className="container">
               Post Content
 
               <input
@@ -59,7 +59,7 @@ export default function NewPost({ newPostTitle, setNewPostTitle, newPostContent,
                 value={newPostContent}
               />
             </div>
-            <div>
+            <div className="container">
               External Link
               <input
                 type='text'
@@ -70,7 +70,7 @@ export default function NewPost({ newPostTitle, setNewPostTitle, newPostContent,
               />
             </div>
           </div>
-          <div>
+          <div className="container">
             <div className="Npbutton"
               onClick={
                 () => { close(); addPost(); }
@@ -84,8 +84,6 @@ export default function NewPost({ newPostTitle, setNewPostTitle, newPostContent,
               Close
 
             </div>
-
-
           </div>
         </div>
 
