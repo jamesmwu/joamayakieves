@@ -10,11 +10,13 @@
 
 ```bash
 cd frontend
+npm i
 npm start
 ```
 Then open new terminal:
 ```bash
 cd backend
+npm i
 npm start
 ```
 
