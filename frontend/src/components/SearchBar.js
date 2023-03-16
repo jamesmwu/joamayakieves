@@ -6,37 +6,36 @@ import Bubbles from "../components/Bubbles"; // new needed for searching through
 
 // treat like text box 
 
-const SearchBar = ({ bubblePost, setSearchResults}) => {
-  const handleSubmit = (e) => e.preventDefault()
-  
-  const handleSearchChange = (e) => {
-    if (!e.target.value) return setSearchResults(bubblePost)
+const SearchBar = ({ bubblePost, setSearchResults }) => {
+  const handleSubmit = (e) => e.preventDefault();
 
-    const results = bubblePost.filter(bubblePost => bubblePost.title.toLowerCase().includes(e.target.value)|| 
-    (bubblePost.content.toLowerCase().includes(e.target.value))||(bubblePost.user.toLowerCase().includes(e.target.value)))
-    setSearchResults(results)
-    
-  }
-  return(
+  const handleSearchChange = (e) => {
+    if (!e.target.value) return setSearchResults(bubblePost);
+
+    const results = bubblePost.filter((bubblePost) => bubblePost.title.toLowerCase().includes(e.target.value) ||
+      (bubblePost.content.toLowerCase().includes(e.target.value)) || (bubblePost.user.toLowerCase().includes(e.target.value)));
+    setSearchResults(results);
+  };
+  return (
     <header>
       <form className="search" onSubmit={handleSubmit}>
         <div className="searchInputs">
           <input
-          
-          type="text"
-          id="search"
-          onChange={handleSearchChange}
+
+            type="text"
+            id="search"
+            onChange={handleSearchChange}
           />
           <div className="searchIcon">
-          <SearchIcon /> 
+            <SearchIcon />
           </div>
         </div>
-        
+
       </form>
     </header>
-  )
-}
-export default SearchBar
+  );
+};
+export default SearchBar;
 /*
 function SearchBar({ placeholder, data }) {
   const [filteredData, setFilteredData] = useState([]);
@@ -82,7 +81,7 @@ function SearchBar({ placeholder, data }) {
         <div className="dataResult">
           {filteredData.slice(0, 15).map((value, key) => {
             return (
-              <a className="dataItem" href={value.link} target="_blank"> 
+              <a className="dataItem" href={value.link} target="_blank">
                 <p>{value.title} </p>
               </a>
             );

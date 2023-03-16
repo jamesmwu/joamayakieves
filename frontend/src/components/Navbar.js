@@ -1,30 +1,28 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import SearchBar from "./SearchBar";
-import WebsiteLogo from "../icons/reach4theclouds.jpg"
+import WebsiteLogo from "../icons/reach4theclouds.jpg";
 import Bubbles from "../components/Bubbles";
 
 export default function Navbar() {
     return (
         <nav className="navStyle">
-            
-            <Link to="/" ><img src={WebsiteLogo}/></Link>
-            
-            <ul> 
-                <hul>
-                    <CustomLink className="pageLinks" to="/">Home</CustomLink>
-                </hul>             
-                
+
+            <Link to="/" ><img src={WebsiteLogo} /></Link>
+
+            <ul>
+                <CustomLink className="pageLinks" to="/">Home</CustomLink>
+
                 <CustomLink className="pageLinks" to="/profile">Profile</CustomLink>
             </ul>
-            
-           
+
+
         </nav>
     );
 }
 
-function CustomLink({to, children,...props}) {
-   const resolvedPath = useResolvedPath(to)
-   const isActive = useMatch({path: resolvedPath.pathname, end: true}) // end: true to make sure whole path matches
+function CustomLink({ to, children, ...props }) {
+    const resolvedPath = useResolvedPath(to);
+    const isActive = useMatch({ path: resolvedPath.pathname, end: true }); // end: true to make sure whole path matches
 
     return (
         <li className={isActive ? "active" : ""}>
