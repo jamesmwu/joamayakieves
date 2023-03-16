@@ -1,10 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/SearchBar.css";
 import SearchIcon from "../icons/search-icon.jsx";
-import CloseIcon from "../icons/close-icon.jsx";
-import Bubbles from "../components/Bubbles"; // new needed for searching through the bubbles?
 
-// treat like text box 
 
 const SearchBar = ({ bubblePost, setSearchResults }) => {
   const handleSubmit = (e) => e.preventDefault();
