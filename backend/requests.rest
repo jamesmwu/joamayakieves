@@ -18,7 +18,7 @@ GET http://localhost:3001/users
 
 ###
 
-PUT http://localhost:3001/users/edit/63ec81eb9a76a2939f1a8fda
+PUT http://localhost:3001/users/edit/640fb6f4dcd654601b071183
 Content-Type: application/json
 
 {
@@ -60,7 +60,7 @@ Content-Type: application/json
 }
 
 ### 
-PUT http://localhost:3001/posts/create 
+POST http://localhost:3001/posts/create 
 Content-Type: application/json
 
 {
@@ -76,9 +76,12 @@ DELETE http://localhost:3001/posts/delete/640c1ecd7d06c3e34377014c
 
 ###
 
-PUT http://localhost:3001/posts/edit/63f6ef2eab18561b0405751a
+PUT http://localhost:3001/posts/edit/64128687c9dfc55f23f24e42
 Content-Type: application/json
 
 {
     "content": "bga"
 }
+
+### 
+PUT http://localhost:3001/posts/likes/64128687c9dfc55f23f24e42
