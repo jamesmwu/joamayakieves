@@ -1,12 +1,19 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import WebsiteLogo from "../icons/reach4theclouds.jpg";
+
 export default function Navbar() {
     return (
         <nav className="navStyle">
-            <Link to="/home" className="site-title"> Opportunity Board</Link>
+
+            <Link to="/home" ><img src={WebsiteLogo} alt='Website Logo' /></Link>
+
             <ul>
-                <CustomLink to="/home">Home</CustomLink>
-                <CustomLink to="/profile">Profile</CustomLink>
+                <CustomLink className="pageLinks" to="/home">Home</CustomLink>
+
+                <CustomLink className="pageLinks" to="/profile">Profile</CustomLink>
             </ul>
+
+
         </nav>
     );
 }
