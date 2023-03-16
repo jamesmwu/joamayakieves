@@ -13,6 +13,11 @@ img {
 	width: 70px;
 }
 
+h2 {
+	margin-bottom: 1rem;
+	margin-top: 5rem;
+}
+
 .loginStyle {
 	height: 50vh;
 	display: flex;
@@ -46,9 +51,22 @@ input {
 
 button {
 	border: none;
-	background-color: white;
+	background-color: rgb(47, 181, 248);
+	color: white;
+	font-weight: bold;
 	padding: 10px;
 	border-radius: 10px;
 	cursor: pointer;
 	width: 10rem;
+	box-shadow: 3px 3px 6px 1px rgba(196, 196, 196, 0.219);
 }
+
+button:hover {
+	transform: scale(1.02);
+}
+
+.logoutButton {
+	margin-top: 5rem;
+}
+
+

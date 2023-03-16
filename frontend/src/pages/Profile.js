@@ -39,7 +39,7 @@ function Profile() {
   return (
     <div>
       <h1>What's poppin, {userDetails.username}</h1>
-      <h2>Your posts</h2>
+      <h2>Your posts:</h2>
       <div className="bubble-container">
         {userBubbles.map((bub) => {
           if (bub.user === userDetails.username) {
@@ -49,9 +49,11 @@ function Profile() {
         }).reverse()}
       </div>
 
-      <button onClick={handleLogout} className='button'>
-        Logout
-      </button>
+      <div className="logoutButton">
+        <button onClick={handleLogout} className='button'>
+          Logout
+        </button>
+      </div>
     </div>
   );
 }
