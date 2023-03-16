@@ -12,8 +12,8 @@ const SearchBar = ({ bubblePost, setSearchResults }) => {
   const handleSearchChange = (e) => {
     if (!e.target.value) return setSearchResults(bubblePost);
 
-    const results = bubblePost.filter((bubblePost) => bubblePost.title.toLowerCase().includes(e.target.value) ||
-      (bubblePost.content.toLowerCase().includes(e.target.value)) || (bubblePost.user.toLowerCase().includes(e.target.value)));
+    const results = bubblePost.filter((bubblePost) => bubblePost.title.toLowerCase().includes(e.target.value.toLowerCase()) ||
+      (bubblePost.content.toLowerCase().includes(e.target.value.toLowerCase())) || (bubblePost.user.toLowerCase().includes(e.target.value.toLowerCase())));
     setSearchResults(results);
   };
   return (
