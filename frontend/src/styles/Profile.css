@@ -42,6 +42,10 @@ input {
 	margin-top: 2rem;
 }
 
+.userInputStyling:hover {
+	transform: scale(1.01);
+}
+
 .btnContainer {
 	margin-top: 3rem;
 	width: 23rem;

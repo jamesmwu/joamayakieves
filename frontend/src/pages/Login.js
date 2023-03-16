@@ -39,26 +39,30 @@ function Login() {
             <div>
                 <div className='userInput'>
                     <h1>Username</h1>
-                    <input
-                        className='profInput'
-                        value={username}
-                        onChange={e => setUsername(e.target.value)}
-                        type='text'
-                        placeholder='Username here!'
-                        disabled={loading}
-                    />
+                    <div className="userInputStyling">
+                        <input
+                            className='profInput'
+                            value={username}
+                            onChange={e => setUsername(e.target.value)}
+                            type='text'
+                            placeholder='Username here!'
+                            disabled={loading}
+                        />
+                    </div>
                 </div>
 
                 <div className='userInput'>
                     <h1>Password</h1>
-                    <input
-                        className='profInput'
-                        value={password}
-                        onChange={e => setPassword(e.target.value)}
-                        type='password'
-                        placeholder='Password here!'
-                        disabled={loading}
-                    />
+                    <div className="userInputStyling">
+                        <input
+                            className='profInput'
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                            type='password'
+                            placeholder='Password here!'
+                            disabled={loading}
+                        />
+                    </div>
                 </div>
             </div>
             {errorMessage ? <p className='error'>{errorMessage}</p> : null}
