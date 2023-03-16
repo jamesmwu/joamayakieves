@@ -80,7 +80,7 @@ PUT http://localhost:3001/posts/edit/64123331e908ccdb7c869f58
 Content-Type: application/json
 
 {
-    "content": "ba"
+    "content": "hehea"
 }
 
 ### 

@@ -2,14 +2,17 @@ import React, { useState } from 'react';
 import "../styles/Bubbles.css";
 import LikedHeart from "../icons/liked-heart.jsx";
 import UnlikedHeart from "../icons/unliked-heart.jsx";
+import axios from 'axios';
+
 // import User from "../icons/user.jsx"
 // import Arrow from "../icons/arrow-up-right.jsx"
 
-function BubbleItem({ title, author, about, link }) {
+function BubbleItem({ title, author, about, link, likes}) {
   const [isUnlikedHeart, setUnlikedHeart] = useState(true);
 
   function handleHeartClick() {
     setUnlikedHeart(!isUnlikedHeart);
+
   }
 
   return (
@@ -22,10 +25,11 @@ function BubbleItem({ title, author, about, link }) {
               <UnlikedHeart />
             ) : (
               <LikedHeart />
-            )}
+            )} 
+             <div className="likes">{likes}</div>
           </div>
         </div>
-
+       
         <div className="author">{author}</div>
         <div className="about">{about}</div>
 
