@@ -4,6 +4,18 @@ body{
 
 }
 
+.searchContainer {
+  height: 40px;
+  width: 100%;
+  padding: 15px;
+  border: 2px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 .searchInputs {
     position: sticky;
     display: flex;
@@ -13,10 +25,8 @@ body{
 
   .search input {
     background-color: rgb(224, 244, 248);
-    border: 0;
+    border: 2px;
     border-radius: 2px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
     font-size: 14px;
     padding: 10px;
     height: 15px;
@@ -24,6 +34,8 @@ body{
   }
 
   .searchIcon {
+    margin-top: 8px;
+    height: 35px;
     width: 50px;
     background-color: rgb(224, 244, 248);
     display: grid;
@@ -61,10 +73,6 @@ body{
   }
   a {
     text-decoration: none;
-  }
-
-  a:hover {
-    background-color: lightgrey;
   }
 
   #clearBtn {

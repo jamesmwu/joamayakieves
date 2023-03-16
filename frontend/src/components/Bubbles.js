@@ -36,7 +36,7 @@ function Bubbles() {
 
   return (
     <div className='bubble-container'>
-      <div className='container'>
+      <div className='searchContainer'>
         <SearchBar bubblePost={bubbles} setSearchResults={setSearchResults} />
       </div>
 
