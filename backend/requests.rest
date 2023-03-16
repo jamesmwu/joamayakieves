@@ -76,12 +76,12 @@ DELETE http://localhost:3001/posts/delete/640c1ecd7d06c3e34377014c
 
 ###
 
-PUT http://localhost:3001/posts/edit/64128687c9dfc55f23f24e42
+PUT http://localhost:3001/posts/edit/64123331e908ccdb7c869f58
 Content-Type: application/json
 
 {
-    "content": "bga"
+    "content": "ba"
 }
 
 ### 
-PUT http://localhost:3001/posts/likes/64128687c9dfc55f23f24e42
+PUT http://localhost:3001/posts/likes/64123331e908ccdb7c869f58

@@ -128,8 +128,7 @@ app.put('/posts/edit/:_id', async (req, res) => {
 // increase likes on the post
 app.put('/posts/likes/:_id', async (req, res) => {
   const post = await Post.findById(req.params._id);
-  post.likes = req.body.likes+1;
-
-
-  res.json(post.likes);
+  post.likes++;
+  post.save(); 
+  res.json(post);
 });
