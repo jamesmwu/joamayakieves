@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "../styles/Bubbles.css";
 import "../styles/SearchBar.css";
-import BubbleItem from "./BubbleItem";
 import axios from 'axios';
 import SearchBar from "../components/SearchBar";
 import ListPage from './ListPage';
