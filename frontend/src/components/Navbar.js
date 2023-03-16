@@ -7,10 +7,10 @@ export default function Navbar() {
     return (
         <nav className="navStyle">
 
-            <Link to="/" ><img src={WebsiteLogo} /></Link>
+            <Link to="/home" ><img src={WebsiteLogo} /></Link>
 
             <ul>
-                <CustomLink className="pageLinks" to="/">Home</CustomLink>
+                <CustomLink className="pageLinks" to="/home">Home</CustomLink>
 
                 <CustomLink className="pageLinks" to="/profile">Profile</CustomLink>
             </ul>

@@ -10,7 +10,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3001/users/delete/63ec7d41e187997d05803cfc
+DELETE http://localhost:3001/users/delete/640fb6afdcd654601b071172
 
 ###
 
@@ -18,7 +18,7 @@ GET http://localhost:3001/users
 
 ###
 
-PUT http://localhost:3001/users/edit/63ec81eb9a76a2939f1a8fda
+PUT http://localhost:3001/users/edit/640fb6f4dcd654601b071183
 Content-Type: application/json
 
 {
@@ -29,6 +29,17 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3001/users/
+
+###
+
+
+POST http://localhost:3001/login
+Content-Type: application/json
+
+{
+	"username" : "test",
+	"password" : "OOGA"
+}
 
 ###
 
@@ -49,7 +60,7 @@ Content-Type: application/json
 }
 
 ### 
-PUT http://localhost:3001/posts/create 
+POST http://localhost:3001/posts/create 
 Content-Type: application/json
 
 {
@@ -65,9 +76,12 @@ DELETE http://localhost:3001/posts/delete/640c1ecd7d06c3e34377014c
 
 ###
 
-PUT http://localhost:3001/posts/edit/63f6ef2eab18561b0405751a
+PUT http://localhost:3001/posts/edit/64123331e908ccdb7c869f58
 Content-Type: application/json
 
 {
-    "content": "bga"
+    "content": "hehea"
 }
+
+### 
+PUT http://localhost:3001/posts/likes/64123331e908ccdb7c869f58

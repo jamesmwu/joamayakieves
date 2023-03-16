@@ -35,7 +35,31 @@ app.get('/users/:_id', async (req, res) => {
   res.json(user);
 });
 
+app.post('/login', async (req, res) => {
+  const user = await User.findOne({ username: req.body.username });
+  if (!user) {
+    res.json({ error: "That username doesn't exist" });
+    return;
+  }
+  if (
+    user.comparePassword(req.body.password, function (err, isMatch) {
+      if (err) throw err;
+      if (isMatch) {
+        res.json(user);
+      } else {
+        res.json({ error: 'Incorrect password' });
+      }
+    })
+  );
+});
+
 app.post('/users/create', async (req, res) => {
+  const dupUser = await User.findOne({ username: req.body.username });
+  if (dupUser) {
+    res.json({ error: 'Duplicate username exists.' });
+    return;
+  }
+
   const user = new User({
     username: req.body.username,
     password: req.body.password
@@ -98,5 +122,13 @@ app.put('/posts/edit/:_id', async (req, res) => {
   post.content = req.body.content;
 
   post.save();
+  res.json(post);
+});
+
+// increase likes on the post
+app.put('/posts/likes/:_id', async (req, res) => {
+  const post = await Post.findById(req.params._id);
+  post.likes++;
+  post.save(); 
   res.json(post);
 });

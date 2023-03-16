@@ -1,6 +1,76 @@
-#circle {
-    width: 100px;
-    height: 100px;
-    background: red;
-    border-radius: 50%
-  }
+.Profile {
+	text-align: center;
+	display: flex;
+	min-height: 100vh;
+	align-items: center;
+	justify-content: center;
+}
+
+img {
+	border-radius: 50%;
+	opacity: 1;
+	border: 2px solid rgb(0, 0, 0);
+	width: 70px;
+}
+
+h2 {
+	margin-bottom: 1rem;
+	margin-top: 5rem;
+}
+
+.loginStyle {
+	height: 50vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+input {
+	margin: 0.5rem 0;
+	padding: 15px;
+	border: none;
+	border-radius: 10px;
+	width: 50vh;
+	text-align: left;
+}
+
+.profInput {
+	margin-top: 1rem;
+}
+
+.userInput {
+	margin-top: 2rem;
+}
+
+.userInputStyling:hover {
+	transform: scale(1.01);
+}
+
+.btnContainer {
+	margin-top: 3rem;
+	width: 23rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+button {
+	border: none;
+	background-color: rgb(47, 181, 248);
+	color: white;
+	font-weight: bold;
+	padding: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	width: 10rem;
+	box-shadow: 3px 3px 6px 1px rgba(196, 196, 196, 0.219);
+}
+
+button:hover {
+	transform: scale(1.02);
+}
+
+.logoutButton {
+	margin-top: 5rem;
+}
+
+
