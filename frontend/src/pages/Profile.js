@@ -43,7 +43,7 @@ function Profile() {
       <div className="bubble-container">
         {userBubbles.map((bub) => {
           if (bub.user === userDetails.username) {
-            return (<BubbleItem key={bub._id} title={bub.title} author={bub.user} link={bub.link} about={bub.content} />);
+            return (<BubbleItem key={bub._id} title={bub.title} author={bub.user} link={bub.link} about={bub.content} likes={bub.likes} />);
           }
           else return null;
         }).reverse()}
