@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "../styles/Bubbles.css";
+import "../styles/SearchBar.css";
 import BubbleItem from "./BubbleItem";
 import axios from 'axios';
 import SearchBar from "../components/SearchBar";
@@ -21,18 +22,20 @@ function Bubbles() {
 
   useEffect(() => {
     getFeed();
-  }, [bubbles]);
+  }, []);
   
   // useEffect(() => {
   //   getFeed().then(json => {
-  //     setBubbles(json) // here it is not waiting? 
-  //     setSearchResults(json) //
-  //   })
-  // }, [bubbles])
+  //     setBubbles(json) //here it is not waiting? 
+  //     setSearchResults(searchResults)  })
+  // }, [bubbles]);
 
   return (
-    <div>
-    <SearchBar bubblePost={bubbles} setSearchResults={setSearchResults}/>
+    <div className='bubble-container'>
+      <div className='container'>
+        <SearchBar bubblePost={bubbles} setSearchResults={setSearchResults}/>
+      </div>
+    
     <ListPage searchResults={searchResults}/>
     </div>
     )

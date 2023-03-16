@@ -4,10 +4,19 @@ body{
 
 }
 
+.container {
+  height: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 .searchInputs {
     position: sticky;
-    margin-top: 32px;
     display: flex;
+    margin: auto;
    justify-content: flex-end;
   }
   
@@ -24,7 +33,6 @@ body{
   }
   
   .searchIcon {
-    
     width: 50px;
     background-color: rgb(224, 244, 248);
     display: grid;

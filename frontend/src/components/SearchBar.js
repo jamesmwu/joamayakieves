@@ -8,26 +8,30 @@ import Bubbles from "../components/Bubbles"; // new needed for searching through
 
 const SearchBar = ({ bubblePost, setSearchResults}) => {
   const handleSubmit = (e) => e.preventDefault()
-
+  
   const handleSearchChange = (e) => {
-    if (e.target.value === "") return setSearchResults(bubblePost)
+    if (!e.target.value) return setSearchResults(bubblePost)
 
     const results = bubblePost.filter(bubblePost => bubblePost.title.toLowerCase().includes(e.target.value)|| 
     (bubblePost.content.toLowerCase().includes(e.target.value))||(bubblePost.user.toLowerCase().includes(e.target.value)))
     setSearchResults(results)
+    
   }
   return(
     <header>
       <form className="search" onSubmit={handleSubmit}>
-        <input
-          className="search__input"
+        <div className="searchInputs">
+          <input
+          
           type="text"
           id="search"
           onChange={handleSearchChange}
           />
-          <button className="search__button">
+          <div className="searchIcon">
           <SearchIcon /> 
-          </button>
+          </div>
+        </div>
+        
       </form>
     </header>
   )

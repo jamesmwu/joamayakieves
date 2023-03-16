@@ -9,7 +9,6 @@ export default function Navbar() {
             
             <Link to="/" ><img src={WebsiteLogo}/></Link>
             
-          
             <ul> 
                 <hul>
                     <CustomLink className="pageLinks" to="/">Home</CustomLink>
