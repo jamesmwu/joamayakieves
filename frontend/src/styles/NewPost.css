@@ -4,6 +4,7 @@ body {
 	font-family: 'Karla', sans-serif;
 	font-weight: bold;
 }
+
 .Homebutton {
 	position: sticky;
 	bottom: 1rem;
@@ -23,6 +24,10 @@ body {
 	margin-bottom: 0%;
 	display: inline-block;
 	box-shadow: 0 0 3px rgb(102, 104, 122);
+}
+
+.Homebutton:hover {
+	transform: scale(1.05);
 }
 
 .Bigbox {
@@ -45,6 +50,10 @@ body {
 	padding: 5px;
 }
 
+.Npbutton:hover {
+	transform: scale(1.01);
+}
+
 .Closeb {
 	text-align: center;
 	color: white;
@@ -58,6 +67,10 @@ body {
 	border-radius: 5px;
 	border: 12px;
 	padding: 5px;
+}
+
+.Closeb:hover {
+	transform: scale(1.01);
 }
 
 .Popupstyle {
@@ -77,4 +90,8 @@ body {
 	border-radius: 5px;
 	padding: 10px;
 	width: 91%;
+}
+
+.messageInput:hover {
+	transform: scale(1.01);
 }
