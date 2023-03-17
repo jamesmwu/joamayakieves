@@ -93,6 +93,12 @@ h1 {
 	margin: 0 auto;
 } */
 
+.heart {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .heart:hover {
 	transform: scale(1.05);
 }

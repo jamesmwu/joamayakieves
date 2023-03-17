@@ -24,16 +24,6 @@ function BubbleItem({ postId, title, author, about, link, likes }) {
       });
   }
 
-  // useEffect(() => {
-  //   updateLikes();
-  // }, [likeCount]);
-
-
-  // function handleHeartClick() {
-  //   setUnlikedHeart(!isUnlikedHeart);
-  //   updateLikes();
-  // }
-
   return (
     <div className="bubble">
       <div className="text">
@@ -41,11 +31,6 @@ function BubbleItem({ postId, title, author, about, link, likes }) {
           <div className="title">{title}</div>
           <div className="heart" onClick={() => { updateLikes(); }}>
             <LikedHeart />
-            {/* {isUnlikedHeart ? (
-              <LikedHeart />
-            ) : (
-              <LikedHeart />
-            )} */}
             <div className="likes">{likes}</div>
           </div>
         </div>
