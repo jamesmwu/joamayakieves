@@ -24,6 +24,16 @@ function BubbleItem({ postId, title, author, about, link, likes }) {
       });
   }
 
+  async function deletePost() {
+    axios
+      .delete(URL + '/posts/delete/' + postId)
+      .then(function (response) {
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   // useEffect(() => {
   //   updateLikes();
   // }, [likeCount]);
@@ -52,7 +62,9 @@ function BubbleItem({ postId, title, author, about, link, likes }) {
 
         <div className="author">{author}</div>
         <div className="about">{about}</div>
-
+        <div className="delete" onClick={() => { deletePost(); }}>
+          <a>delete me</a>
+        </div>
       </div>
       {link ?
         <div className='linking'>
