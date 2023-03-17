@@ -44,7 +44,7 @@ function BubbleItem({ postId, title, author, about, link, likes, profile }) {
       <div className='modalBottom'>
         {link ?
           <div className='linking'>
-            <a href={link} target="_blank" rel="noopener noreferrer">Sign Up</a>
+            <a href={link} target="_blank" rel="noopener noreferrer">Learn More</a>
           </div> : null}
         {
           profile ?
