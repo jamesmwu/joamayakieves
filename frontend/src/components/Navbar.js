@@ -1,5 +1,5 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
-import WebsiteLogo from "../icons/reach4theclouds.jpg";
+import WebsiteLogo from "../icons/reach_4_the_clouds_logo.png";
 
 export default function Navbar() {
     return (
