@@ -10,18 +10,9 @@ import Trash from '../icons/Trash-Icon.png';
 
 const URL = 'http://localhost:3001';
 
-function BubbleItem({ postId, title, author, about, link, likes, profile }) {
+function BubbleItem({ postId, title, author, about, link, likes, profile, updateLikes }) {
 
-
-  async function updateLikes() {
-    axios
-      .put(URL + '/posts/likes/' + postId)
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
-
-  async function deletePost() {
+  async function deletePost(postId) {
     axios.delete(URL + '/posts/delete/' + postId)
       .catch(function (error) { console.log(error); });
   }
@@ -31,7 +22,7 @@ function BubbleItem({ postId, title, author, about, link, likes, profile }) {
       <div className="text">
         <div className='topContainer'>
           <div className="title">{title}</div>
-          <div className="heart" onClick={() => { updateLikes(); }}>
+          <div className="heart" onClick={() => { updateLikes(postId); }}>
             <LikedHeart />
             <div className="likes">{likes}</div>
           </div>
@@ -48,7 +39,7 @@ function BubbleItem({ postId, title, author, about, link, likes, profile }) {
           </div> : null}
         {
           profile ?
-            <img src={Trash} alt='Delete Post' onClick={() => { deletePost(); }} /> : null
+            <img src={Trash} alt='Delete Post' onClick={() => { deletePost(postId); }} /> : null
         }
       </div>
 
