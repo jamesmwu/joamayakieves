@@ -30,17 +30,32 @@ body {
 	transform: scale(1.05);
 }
 
-.Bigbox {
-	padding: 50px;
-}
-
 .popup-content {
 	border-radius: 25px;
 	padding: 50px;
+	max-width: 600px;
+}
+
+textarea {
+	border: none;
+	resize: none;
+	margin-top: 10px;
+}
+
+textarea:focus {
+	outline: none;
 }
 
 .container {
 	padding: 0.5rem;
+}
+
+.ButtonContainer {
+	padding: 0.5rem;
+	display: flex;
+	float: right;
+	margin-bottom: 1rem;
+	margin-right: 1rem;
 }
 
 .Npbutton {
@@ -48,12 +63,15 @@ body {
 	color: white;
 	font-family: 'Karla', sans-serif;
 	cursor: pointer;
-	margin-bottom: 5px;
+	/* margin-bottom: 5px;
+	margin-left: 70px;
+	margin-right: 70px; */
 	background-color: rgb(47, 181, 248);
 	border: #6d9ced;
 	border-radius: 5px;
 	border: 12px;
 	padding: 5px;
+	width: 70px;
 }
 
 .Npbutton:hover {
@@ -70,6 +88,8 @@ body {
 	border-radius: 5px;
 	border: 12px;
 	padding: 5px;
+	width: 70px;
+	margin-left: 10px;
 }
 
 .Closeb:hover {
@@ -87,9 +107,6 @@ body {
 .messageInput {
 	font-family: 'Karla', sans-serif;
 	background: #cce9fd;
-	display: block;
-	margin: 10px 10px;
-	border: 2px #6d9ced;
 	border-radius: 5px;
 	padding: 10px;
 	width: 91%;

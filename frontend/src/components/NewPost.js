@@ -51,7 +51,7 @@ export default function NewPost({ newPostTitle, setNewPostTitle, newPostContent,
             <div className="container">
               Post Content
 
-              <input
+              <textarea
                 type='text'
                 className='messageInput'
                 onChange={(e) => setNewPostContent(e.target.value)}
@@ -70,7 +70,7 @@ export default function NewPost({ newPostTitle, setNewPostTitle, newPostContent,
               />
             </div>
           </div>
-          <div className="container">
+          <div className="ButtonContainer">
             <div className="Npbutton"
               onClick={
                 () => { close(); addPost(); }
