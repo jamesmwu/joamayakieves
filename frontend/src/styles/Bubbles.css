@@ -100,12 +100,12 @@ h1 {
 }
 
 .heart:hover {
-	transform: scale(1.05);
+	transform: scale(1.2);
 }
 
 .linking {
-	margin-top: 2rem;
 	text-align: left;
+	align-self: center;
 }
 
 .linking a {
@@ -122,4 +122,20 @@ h1 {
 .linking a:hover {
 	background-color: #d58011;
 	color: white;
+}
+
+.modalBottom {
+	margin-top: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.modalBottom img {
+	width: 12%;
+	cursor: pointer;
+}
+
+.modalBottom img:hover {
+	transform: scale(1.2);
 }
