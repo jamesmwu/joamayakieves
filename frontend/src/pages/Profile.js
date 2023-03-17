@@ -22,6 +22,17 @@ function Profile() {
     }
   }
 
+  async function updateLikes(postId) {
+    axios
+      .put(URL + '/posts/likes/' + postId)
+      .then(function (response) {
+        // console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   useEffect(() => {
     getFeed();
   }, [userBubbles]);
@@ -43,7 +54,7 @@ function Profile() {
       <div className="bubble-container">
         {userBubbles.map((bub) => {
           if (bub.user === userDetails.username) {
-            return (<BubbleItem key={bub._id} postId={bub._id} title={bub.title} author={bub.user} link={bub.link} about={bub.content} likes={bub.likes} profile='true' />);
+            return (<BubbleItem key={bub._id} postId={bub._id} title={bub.title} author={bub.user} link={bub.link} about={bub.content} likes={bub.likes} profile='true' updateLikes={updateLikes} />);
           }
           else return null;
         }).reverse()}
