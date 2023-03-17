@@ -13,6 +13,7 @@ const SearchBar = ({ bubblePost, setSearchResults }) => {
       (bubblePost.content.toLowerCase().includes(e.target.value.toLowerCase())) || (bubblePost.user.toLowerCase().includes(e.target.value.toLowerCase())));
     setSearchResults(results);
   };
+
   return (
     <header>
       <form className="search" onSubmit={handleSubmit}>

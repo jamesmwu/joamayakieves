@@ -10,10 +10,16 @@ function Bubbles() {
   //Array of posts
   const [bubbles, setBubbles] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
+  const [flag, setFlag] = useState(true);
+
   async function getFeed() {
     try {
       const response = await axios.get(URL + '/posts');
       setBubbles(response.data);
+      if (flag) {
+        setFlag(false);
+        setSearchResults(response.data);
+      }
     } catch (error) {
       console.error(error);
     }
@@ -23,20 +29,12 @@ function Bubbles() {
     getFeed();
   }, [bubbles]);
 
-  useEffect(() => {
-    setSearchResults(bubbles);
-  }, [bubbles]);
 
-  // useEffect(() => {
-  //   getFeed().then(json => {
-  //     setBubbles(json) //here it is not waiting? 
-  //     setSearchResults(searchResults)  })
-  // }, [bubbles]);
 
   return (
     <div className='bubble-container'>
       <div className='searchContainer'>
-        <SearchBar bubblePost={bubbles} setSearchResults={setSearchResults} />
+        <SearchBar bubblePost={bubbles} searchResults={searchResults} setSearchResults={setSearchResults} />
       </div>
 
       <ListPage searchResults={searchResults} />
