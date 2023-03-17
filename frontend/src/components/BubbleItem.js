@@ -1,7 +1,7 @@
-import React, { useState, useEffect} from 'react';
+import React from 'react';
 import "../styles/Bubbles.css";
 import LikedHeart from "../icons/liked-heart.jsx";
-import UnlikedHeart from "../icons/unliked-heart.jsx";
+// import UnlikedHeart from "../icons/unliked-heart.jsx";
 import axios from 'axios';
 
 // import User from "../icons/user.jsx"
@@ -9,19 +9,19 @@ import axios from 'axios';
 
 const URL = 'http://localhost:3001';
 
-function BubbleItem({ postId, title, author, about, link, likes}) {
-  const [isUnlikedHeart, setUnlikedHeart] = useState(true);
+function BubbleItem({ postId, title, author, about, link, likes }) {
+  // const [isUnlikedHeart, setUnlikedHeart] = useState(true);
 
-  const [likeCount, setLikes] = useState([])
+  // const [likeCount, setLikes] = useState([]);
 
   async function updateLikes() {
-    try {
-      // alert('Button was pressedsss!'); 
-      const likedResponse = await axios.put(URL + '/posts/likes/'+ postId);
-      setLikes(likedResponse.data);
-    } catch (error) {
-      console.error(error);
-    }
+    axios
+      .put(URL + '/posts/likes/' + postId)
+      .then(function (response) {
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
 
   // useEffect(() => {
@@ -29,26 +29,27 @@ function BubbleItem({ postId, title, author, about, link, likes}) {
   // }, [likeCount]);
 
 
-  function handleHeartClick() {
-    setUnlikedHeart(!isUnlikedHeart);
-    updateLikes(); 
-  }
+  // function handleHeartClick() {
+  //   setUnlikedHeart(!isUnlikedHeart);
+  //   updateLikes();
+  // }
 
   return (
     <div className="bubble">
       <div className="text">
         <div className='topContainer'>
           <div className="title">{title}</div>
-          <div className="heart" onClick={()=>{updateLikes()}}>
-            {isUnlikedHeart ? (
+          <div className="heart" onClick={() => { updateLikes(); }}>
+            <LikedHeart />
+            {/* {isUnlikedHeart ? (
               <LikedHeart />
             ) : (
               <LikedHeart />
-            )} 
-             <div className="likes">{likes}</div>
+            )} */}
+            <div className="likes">{likes}</div>
           </div>
         </div>
-       
+
         <div className="author">{author}</div>
         <div className="about">{about}</div>
 

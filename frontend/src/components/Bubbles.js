@@ -21,7 +21,7 @@ function Bubbles() {
 
   useEffect(() => {
     getFeed();
-  }, []);
+  }, [bubbles]);
 
   useEffect(() => {
     setSearchResults(bubbles);

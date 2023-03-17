@@ -1,16 +1,19 @@
 import BubbleItem from "../components/BubbleItem";
-import "../styles/Bubbles.css"
+import React from "react";
+import "../styles/Bubbles.css";
 
 const ListPage = ({ searchResults }) => {
-    const results = searchResults.map(bub =><BubbleItem key={bub._id} postId={bub._id} title={bub.title} author={bub.user} link={bub.link} about={bub.content} likes={bub.likes} />);
-    const content = results?.length ? results : <article><p>No Matching Opportunities</p></article>
-// need to fix this bc th
     return (
-        <div className="bubble-container">{content}</div>
-    )
-}
+        <div className="bubble-container">{
+            searchResults.length === 0 ? <p>No Matching Opportunities</p> :
+                searchResults.map((bub) => {
+                    return (<BubbleItem key={bub._id} postId={bub._id} title={bub.title} author={bub.user} link={bub.link} about={bub.content} likes={bub.likes} />);
+                })
+        }</div>
+    );
+};
 
-export default ListPage
+export default ListPage;
 
 
 
